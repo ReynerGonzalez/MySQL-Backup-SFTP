@@ -65,7 +65,10 @@ quit
 EOF
 elif [ $TYPE -eq 2 ]
 then
-rsync --rsh="sshpass -p $PASSWORD ssh -p $PORT -o StrictHostKeyChecking=no -l $USERNAME" $backup_path/$FILE $SERVER:$REMOTEDIR
+sshpass -p $PASSWORD sftp -oPort=$PORT $USERNAME@$SERVER << !
+cd $REMOTEDIR
+put $FILE
+!
 else
 echo 'Please select a valid type'
 fi

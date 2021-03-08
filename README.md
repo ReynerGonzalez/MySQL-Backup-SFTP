@@ -4,16 +4,10 @@ Un script para realizar respaldos de MySQL a un servidor externo por medio de FT
 
 ## Instalación
 
-### Instale en el servidor origen [rsync](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/chap-managing_confined_services-rsync) 
+### Instale en el gestor de claves ssh [sshpass](https://www.redhat.com/sysadmin/ssh-automation-sshpass) 
 
 ```bash
-sudo yum install rsync
-```
-
-### Instale en el servidor destino [rsync](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/chap-managing_confined_services-rsync) 
-
-```bash
-sudo yum install rsync
+sudo yum install sshpass
 ```
 
 ### Complete los valores de las variables
